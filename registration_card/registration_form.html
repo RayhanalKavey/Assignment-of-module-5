@@ -4,6 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
+    <link rel="stylesheet" href="registration_form.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="registration-card">
+      <h2 class="registration-card__title">Registration</h2>
+      <form action="" class="registration-form">
+        <div class="column">
+          <!-- Full Name -->
+          <div class="registration-form__input-box">
+            <label for="fname" class="registration-form__label"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Enter your name"
+              class="registration-form__input" />
+          </div>
+          <!-- Email -->
+          <div class="registration-form__input-box">
+            <label for="email" class="registration-form__label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              class="registration-form__input" />
+          </div>
+          <!-- Password -->
+          <div class="registration-form__input-box">
+            <label for="password" class="registration-form__label"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              class="registration-form__input" />
+          </div>
+          <!-- Radio Button -->
+          <h2 class="radio-buttons__title">Gender</h2>
+          <div class="radio-buttons">
+            <div class="radio-button">
+              <input type="radio" id="male" name="fav_language" value="Male" />
+              <label for="male">Male</label>
+            </div>
+            <div class="radio-button">
+              <input
+                type="radio"
+                id="female"
+                name="fav_language"
+                value="Female" />
+              <label for="female">Female</label><br />
+            </div>
+            <div class="radio-button">
+              <input
+                type="radio"
+                id="others"
+                name="fav_language"
+                value="others" />
+              <label for="others">Others</label>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <!-- User Name -->
+          <div class="registration-form__input-box">
+            <label for="uname" class="registration-form__label">Username</label>
+            <input
+              type="text"
+              id="uname"
+              name="uname"
+              placeholder="Enter your username"
+              class="registration-form__input" />
+          </div>
+          <!-- Phone Number -->
+          <div class="registration-form__input-box">
+            <label for="pnumber" class="registration-form__label"
+              >Phone Number</label
+            >
+            <input
+              type="number"
+              id="pnumber"
+              name="pnumber"
+              placeholder="Enter your username"
+              class="registration-form__input" />
+          </div>
+          <!-- Confirm Password -->
+          <div class="registration-form__input-box">
+            <label for="cpassword" class="registration-form__label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="cpassword"
+              name="cpassword"
+              placeholder="Confirm your password"
+              class="registration-form__input" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

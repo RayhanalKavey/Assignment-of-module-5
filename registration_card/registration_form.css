@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  background-color: rgb(192, 155, 226);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-card {
+  background-color: beige;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.registration-card__title {
+}
+.registration-form {
+  display: flex;
+  gap: 2rem;
+}
+.column {
+}
+.registration-form__input-box {
+  display: flex;
+}
+.registration-form__label {
+}
+.registration-form__input {
+}
+.radio-buttons {
+  display: flex;
+}
+.radio-button {
+}
