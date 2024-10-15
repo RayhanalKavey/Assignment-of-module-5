@@ -1,3 +1,6 @@
+/* ==============
+Variables
+=============== */
 :root {
   --font-large: 4rem;
   --font-medium: 2rem;
@@ -9,7 +12,9 @@
   --c-red-light: rgb(237, 110, 110);
   --c-white: whitesmoke;
 }
-
+/* ===============
+Basic reset
+================= */
 *,
 *::after,
 *::before {
@@ -24,7 +29,6 @@ body {
   font-size: var(--font-small);
   font-weight: 400;
   height: 100vh;
-  /* background-color: rgb(192, 155, 226); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,22 +36,23 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-.registration-card {
+/* =============
+Registration card
+============== */
+.reg-card {
   padding: 4rem;
   border-radius: var(--radius-large);
-
   background: transparent;
   border: 1px solid var(--c-white);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(60px);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-.registration-card__title {
+.reg-card__title {
   text-align: center;
   margin-bottom: 3.6rem;
   font-size: var(--font-large);
 }
-.registration-form {
+.reg-form {
   display: flex;
   flex-direction: row-reverse;
   gap: 2rem;
@@ -57,24 +62,31 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
-.registration-form__input-box {
+/* ================
+Input box
+================ */
+.reg-form__input-box {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
 }
 
-.registration-form__label {
+.reg-form__label {
   font-size: var(--font-medium);
 }
-.registration-form__input {
+.reg-form__input {
   padding: 1rem 2rem;
   font-size: var(--font-small);
   border-radius: var(--radius-small);
-  border: 1px solid black;
   outline: none;
-  background: transparent;
+  background-color: antiquewhite;
+  border: 1px solid black;
 }
+
+/* ===============
+Radio button
+================= */
 .radio-buttons__title {
   margin-bottom: 1.6rem;
   font-size: var(--font-medium);
@@ -90,7 +102,33 @@ body {
   align-items: center;
   gap: 0.8rem;
 }
-.registration-form__button-box {
+.radio-button label {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.radio-button input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  border: 1.4px solid black;
+  cursor: pointer;
+}
+.radio-button input[type="radio"]:hover {
+  transition: all 0.3s ease;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+.radio-button input[type="radio"]:checked {
+  background-color: #007bff;
+}
+
+/* ================
+Button
+=================== */
+.reg-form__button-box {
   display: flex;
   align-items: center;
   gap: 1rem;
