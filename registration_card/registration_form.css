@@ -2,15 +2,24 @@
 Variables
 =============== */
 :root {
-  --font-large: 4rem;
-  --font-medium: 2rem;
-  --font-small: 1.6rem;
+  /* Font size */
+  --font-large: 3.8rem;
+  --font-medium: 1.8rem;
+  --font-small: 1.4rem;
+  /* Radius */
   --radius-large: 20px;
   --radius-medium: 12px;
   --radius-small: 6px;
+
+  /* Color */
+  --c-primary: #1f044a;
+  --c-secondary: #5381be;
   --c-red: rgb(235, 83, 83);
   --c-red-light: rgb(237, 110, 110);
   --c-white: whitesmoke;
+  /* Shadow */
+  --shadow-1: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  --shadow-2: 0 0 0 3px rgba(0, 123, 255, 0.2);
 }
 /* ===============
 Basic reset
@@ -27,6 +36,7 @@ html {
 }
 body {
   font-size: var(--font-small);
+  font-family: "Jost", sans-serif;
   font-weight: 400;
   height: 100vh;
   display: flex;
@@ -35,6 +45,7 @@ body {
   background-image: url("bg-img.jpg");
   background-size: cover;
   background-position: center;
+  color: var(--c-primary);
 }
 /* =============
 Registration card
@@ -45,28 +56,38 @@ Registration card
   background: transparent;
   border: 1px solid var(--c-white);
   backdrop-filter: blur(60px);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-1);
+  width: 800px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .reg-card__title {
   text-align: center;
   margin-bottom: 3.6rem;
   font-size: var(--font-large);
 }
+
 .reg-form {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 2rem;
-}
-.column {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
 }
 /* ================
 Input box
 ================ */
 .reg-form__input-box {
   display: flex;
+  width: 100%;
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
@@ -74,14 +95,29 @@ Input box
 
 .reg-form__label {
   font-size: var(--font-medium);
+  font-style: italic;
 }
 .reg-form__input {
+  display: inline-block;
   padding: 1rem 2rem;
   font-size: var(--font-small);
   border-radius: var(--radius-small);
   outline: none;
-  background-color: antiquewhite;
-  border: 1px solid black;
+  background-color: var(--c-white);
+  border: 1px solid var(--c-primary);
+  font-style: italic;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  /* Smooth transition for focus and hover */
+}
+.reg-form__input::placeholder {
+  color: #214d8870;
+  font-style: italic;
+}
+
+.reg-form__input:focus {
+  border-color: var(--c-secondary);
+  color: var(--c-primary);
+  font-style: italic;
 }
 
 /* ===============
@@ -103,26 +139,27 @@ Radio button
   gap: 0.8rem;
 }
 .radio-button label {
-  font-size: 1.6rem;
+  font-size: var(--font-small);
+  font-style: italic;
   cursor: pointer;
 }
-.radio-button input[type="radio"] {
+.radio-button input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 50%;
   width: 18px;
   height: 18px;
-  border: 1.4px solid black;
+  border: 1.4px solid var(--c-primary);
   cursor: pointer;
 }
-.radio-button input[type="radio"]:hover {
+.radio-button input:hover {
   transition: all 0.3s ease;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  border-color: var(--c-secondary);
+  box-shadow: var(--shadow-2);
 }
-.radio-button input[type="radio"]:checked {
-  background-color: #007bff;
+.radio-button input:checked {
+  background-color: var(--c-secondary);
 }
 
 /* ================
@@ -148,8 +185,16 @@ Button
   background-color: var(--c-red-light);
 }
 .btn.btn--submit {
-  background-image: linear-gradient(to right bottom, #446fa7, rgb(73, 8, 177));
+  background-image: linear-gradient(
+    to right bottom,
+    var(--c-secondary),
+    var(--c-primary)
+  );
 }
 .btn.btn--submit:hover {
-  background-image: linear-gradient(to right bottom, #4908b1, #446fa7);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--c-primary),
+    var(--c-secondary)
+  );
 }

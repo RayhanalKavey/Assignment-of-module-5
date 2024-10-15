@@ -4,13 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
+    <!-- ======
+    Jost google font
+   ====== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <!-- ======
+  CSS links
+  ====== -->
+
     <link rel="stylesheet" href="registration_form.css" />
   </head>
   <body>
     <div class="reg-card">
       <h2 class="reg-card__title">Registration</h2>
       <form action="" class="reg-form">
-        <div class="column">
+        <div class="row">
           <!-- User Name -->
           <div class="reg-form__input-box">
             <label for="uname" class="reg-form__label">Username</label>
@@ -21,6 +33,28 @@
               placeholder="Enter your username"
               class="reg-form__input" />
           </div>
+          <!-- Full Name -->
+          <div class="reg-form__input-box">
+            <label for="fname" class="reg-form__label">Full Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Enter your name"
+              class="reg-form__input" />
+          </div>
+        </div>
+        <div class="row">
+          <!-- Email -->
+          <div class="reg-form__input-box">
+            <label for="email" class="reg-form__label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              class="reg-form__input" />
+          </div>
           <!-- Phone Number -->
           <div class="reg-form__input-box">
             <label for="pnumber" class="reg-form__label">Phone Number</label>
@@ -29,6 +63,19 @@
               id="pnumber"
               name="pnumber"
               placeholder="Enter your number"
+              class="reg-form__input" />
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Password -->
+          <div class="reg-form__input-box">
+            <label for="password" class="reg-form__label">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
               class="reg-form__input" />
           </div>
           <!-- Confirm Password -->
@@ -44,37 +91,8 @@
               class="reg-form__input" />
           </div>
         </div>
-        <div class="column">
-          <!-- Full Name -->
-          <div class="reg-form__input-box">
-            <label for="fname" class="reg-form__label">Full Name</label>
-            <input
-              type="text"
-              id="fname"
-              name="fname"
-              placeholder="Enter your name"
-              class="reg-form__input" />
-          </div>
-          <!-- Email -->
-          <div class="reg-form__input-box">
-            <label for="email" class="reg-form__label">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              class="reg-form__input" />
-          </div>
-          <!-- Password -->
-          <div class="reg-form__input-box">
-            <label for="password" class="reg-form__label">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              class="reg-form__input" />
-          </div>
+
+        <div class="row">
           <!-- Radio Button -->
           <div class="radio-button-box">
             <h2 class="radio-buttons__title">Gender</h2>
@@ -105,6 +123,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="row">
           <!-- Buttons -->
           <div class="reg-form__button-box">
             <button class="btn btn--cancel">Cancel</button>
