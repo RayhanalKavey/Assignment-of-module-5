@@ -1,10 +1,10 @@
 <?php
 
 $SubNum1 = 53;
-$SubNum2 = 43;
+$SubNum2 = 23;
 $SubNum3 = 64;
 $SubNum4 = 33;
-$SubNum5 = 33;
+$SubNum5 = 133;
 
 //Print Result function
 function printResult($grade , $totalMarks=0,$averageMarks=0){
@@ -23,7 +23,7 @@ function printResult($grade , $totalMarks=0,$averageMarks=0){
 // Check mark range and individual subject failure function
 function isOutOfRangeOrFail($SubNum1,  $SubNum2,  $SubNum3, $SubNum4,$SubNum5 ){
    switch (true) {
-      case ($SubNum1>100 || $SubNum1<0 || $SubNum2>100 || $SubNum2<0 ||$SubNum3>100 || $SubNum3<0 || $SubNum4>100 && $SubNum4<0 ||$SubNum5>100 && $SubNum5<0):
+      case ($SubNum1>100 || $SubNum1<0 || $SubNum2>100 || $SubNum2<0 ||$SubNum3>100 || $SubNum3<0 || $SubNum4>100 || $SubNum4<0 ||$SubNum5>100 || $SubNum5<0):
          echo "Mark range is invalid!! <br/>";
          return true;
       case($SubNum1<33||  $SubNum2<33||  $SubNum3<33|| $SubNum4<33 ||$SubNum5<33):
